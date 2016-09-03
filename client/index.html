@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebDxD Students</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body ng-app="webdxd" ng-controller="AppCtrl as app" >
+<div class="row">
+  <div class="col-xs-4">
+    <ul>
+      <li ng-repeat="student in app.student" ng-click="app.selectStudent(student)">
+        {{student.firstName}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-6">
+    <h2>{{app.selectedStudent.fullName}}</h2>
+    <span>{{app.selectedStudent.email}}</span>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.0/ui-bootstrap.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
